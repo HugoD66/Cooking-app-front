@@ -1,0 +1,17 @@
+<hr>
+<div *ngIf="data$ | async as data" >
+  <mat-card *ngFor="let ingredient of data">
+    <mat-card-header>
+      {{ ingredient.name }}
+    </mat-card-header>
+    <mat-card-content>
+      <p>ID: {{ ingredient.id }}</p>
+        <p>Quantity: {{ ingredient.quantity }}</p>
+    </mat-card-content>
+  </mat-card>
+</div>
+<!--
+<h4 *ngIf='!data$' class="center">
+  <app-loader></app-loader>
+</h4>
+-->
